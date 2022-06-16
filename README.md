@@ -9,88 +9,88 @@
 - I
 - get venue test
 - seed venues
-- get venues route
 - venue model
+- get venues route
 - get venue by id test
+- update venue model
 - get venue by id route
-- update venue model
 - post venue test
+- update venue model
 - post venue route
-- update venue model
 - update venue test
+- update venue model
 - update venue route
-- update venue model
 - delete venue test
-- delete venue route
 - update venue model
+- delete venue route
 - II
 - get symphony test
 - seed symphonies
-- get symphonies route
 - symphony model
+- get symphonies route
 - get symphony by id test
+- update symphony model
 - get symphony by id route
-- update symphony model
 - post symphony test
+- update symphony model
 - post symphony route
-- update symphony model
 - update symphony test
+- update symphony model
 - update symphony route
-- update symphony model
 - delete symphony test
-- delete symphony route
 - update symphony model
+- delete symphony route
 - III
 - get borough test
 - seed boroughs
-- get boroughs route
 - borough model
+- get boroughs route
 - get borough by id test
+- update borough model
 - get borough by id route
-- update borough model
 - post borough test
+- update borough model
 - post borough route
-- update borough model
 - update borough test
+- update borough model
 - update borough route
-- update borough model
 - delete borough test
-- delete borough route
 - update borough model
+- delete borough route
 - IV
 - get cheese test
 - seed cheeses
-- get cheeses route
 - cheese model
+- get cheeses route
 - get cheese by id test
+- update cheese model
 - get cheese by id route
-- update cheese model
 - post cheese test
+- update cheese model
 - post cheese route
-- update cheese model
 - update cheese test
+- update cheese model
 - update cheese route
-- update cheese model
 - delete cheese test
-- delete cheese route
 - update cheese model
+- delete cheese route
 - V
 - get province test
 - seed provinces
-- get provinces route
 - province model
+- get provinces route
 - get province by id test
+- update province model
 - get province by id route
-- update province model
 - post province test
+- update province model
 - post province route
-- update province model
 - update province test
+- update province model
 - update province route
-- update province model
 - delete province test
-- delete province route
 - update province model
+- delete province route
 
 
 # Template for Backend Express
