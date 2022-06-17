@@ -36,7 +36,7 @@
   - post symphony route
   - update symphony test
   - update symphony model
-- update symphony route
+  - update symphony route
 - delete symphony test
 - update symphony model
 - delete symphony route

@@ -83,12 +83,20 @@ describe('symphony routes', () => {
     expect(res.body.key).toEqual(symphony.key);
   });
 
-  it('should update info on one symphony by id', async () => {
+  it.skip('should update info on one symphony by id', async () => {
     // eslint-disable-next-line quotes
     const res = await request(app).put('/symphonies/3').send({ name: `Symphony No. 3, 'Eroica'` });
     expect(res.status).toEqual(200);
     // eslint-disable-next-line quotes
     expect(res.body.name).toEqual(`Symphony No. 3, 'Eroica'`);
+  });
+
+  it('should delete a row from table', async () => {
+    const res = await request(app).delete('/symphonies/2');
+    expect(res.status).toEqual(200);
+
+    const { body } = await request(app).get('/symphonies/2');
+    expect(body).toEqual('');
   });
 
   afterAll(() => {
