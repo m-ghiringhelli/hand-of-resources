@@ -52,8 +52,8 @@
   - update borough model
   - post borough route
   - update borough test
-- update borough model
-- update borough route
+  - update borough model
+  - update borough route
 - delete borough test
 - update borough model
 - delete borough route

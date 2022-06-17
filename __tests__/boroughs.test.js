@@ -71,12 +71,20 @@ describe('borough routes', () => {
     expect(res.body.county).toEqual(borough.county);
   });
   
-  it('should update a borough by id', async () => {
+  it.skip('should update a borough by id', async () => {
     const res = await request(app).put('/boroughs/4').send({ population: 2500000 });
     expect(res.status).toEqual(200);
     expect(res.body.population).toEqual(2500000);
   });
-  
+
+  it('should delete a row from table', async () => {
+    const res = await request(app).delete('/boroughs/5');
+    expect(res.status).toEqual(200);
+
+    const { body } = await request(app).get('/boroughs/5');
+    expect(body).toEqual('');
+  });
+
   afterAll(() => {
     pool.end();
   });
