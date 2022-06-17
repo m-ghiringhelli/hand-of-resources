@@ -6,7 +6,7 @@
   - new york city boroughs
   - types of cheese
   - canadian provinces
-- I
+  - I
   - get venue test
   - seed venues
   - venue model
@@ -24,7 +24,7 @@
   - update venue model
   - delete venue route
 - II
-- get symphony test
+  - get symphony test
 - seed symphonies
 - symphony model
 - get symphonies route
