@@ -46,7 +46,7 @@ describe('borough routes', () => {
   });
 
   it('should return a borough selected by id', async () => {
-    const res = await(app).get('/boroughs/4');
+    const res = await request(app).get('/boroughs/4');
     const expected = {
       id: '4',
       name: 'Queens',

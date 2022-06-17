@@ -45,8 +45,8 @@
   - seed boroughs
   - borough model
   - get boroughs route
-- get borough by id test
-- update borough model
+  - get borough by id test
+  - update borough model
 - get borough by id route
 - post borough test
 - update borough model
