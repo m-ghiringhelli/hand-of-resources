@@ -41,7 +41,7 @@
   - update symphony model
   - delete symphony route
 - III
-- get borough test
+  - get borough test
 - seed boroughs
 - borough model
 - get boroughs route
