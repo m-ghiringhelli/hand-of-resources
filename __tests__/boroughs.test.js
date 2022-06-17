@@ -70,7 +70,13 @@ describe('borough routes', () => {
     expect(res.body.population).toEqual(borough.population);
     expect(res.body.county).toEqual(borough.county);
   });
-
+  
+  it('should update a borough by id', async () => {
+    const res = await request(app).put('/boroughs/4').send({ population: 2500000 });
+    expect(res.status).toEqual(200);
+    expect(res.body.population).toEqual(2500000);
+  });
+  
   afterAll(() => {
     pool.end();
   });
