@@ -49,7 +49,7 @@
   - update borough model
   - get borough by id route
   - post borough test
-- update borough model
+  - update borough model
 - post borough route
 - update borough test
 - update borough model
