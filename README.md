@@ -25,7 +25,7 @@
   - delete venue route
 - II
   - get symphony test
-- seed symphonies
+  - seed symphonies
 - symphony model
 - get symphonies route
 - get symphony by id test
