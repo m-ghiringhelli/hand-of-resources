@@ -7,13 +7,13 @@
   - types of cheese
   - canadian provinces
 - I
-- get venue test
-- seed venues
-- venue model
-- get venues route
-- get venue by id test
-- update venue model
-- get venue by id route
+  - get venue test
+  - seed venues
+  - venue model
+  - get venues route
+  - get venue by id test
+  - update venue model
+  - get venue by id route
 - post venue test
 - update venue model
 - post venue route

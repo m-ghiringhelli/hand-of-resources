@@ -8,7 +8,7 @@ describe('venue routes', () => {
     return setup(pool);
   });
 
-  it('should return a list of all the venues in the database', async () => {
+  it.skip('should return a list of all the venues in the database', async () => {
     const res = await request(app).get('/venues');
     expect(res.status).toEqual(200);
     console.log(res.body);
@@ -32,9 +32,20 @@ describe('venue routes', () => {
         capacity: 1500
       }
     ]);
-  })
+  });
+
+  it('should fetch details of one venue by id', async () => {
+    const res = await request(app).get('/venues/1');
+    const expected = {
+      id: '1',
+      name: 'Wonder Ballroom',
+      quadrant: 'NE',
+      capacity: 800
+    };
+    expect(res.body).toEqual(expected);
+  });
 
   afterAll(() => {
     pool.end();
-  })
-})
+  });
+});
