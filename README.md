@@ -42,7 +42,7 @@
   - delete symphony route
 - III
   - get borough test
-- seed boroughs
+  - seed boroughs
 - borough model
 - get boroughs route
 - get borough by id test
