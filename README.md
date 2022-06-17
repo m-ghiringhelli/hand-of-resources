@@ -19,8 +19,8 @@
   - post venue route
   - update venue test
   - update venue model
-- update venue route
-- delete venue test
+  - update venue route
+  - delete venue test
 - update venue model
 - delete venue route
 - II
