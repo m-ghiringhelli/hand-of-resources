@@ -20,7 +20,7 @@ CREATE TABLE boroughs (
   name VARCHAR NOT NULL,
   population INT NOT NULL,
   county VARCHAR NOT NULL
-)
+);
 
 INSERT INTO venues (name, quadrant, capacity) VALUES
   ('Wonder Ballroom', 'NE', 800), 
@@ -42,5 +42,5 @@ INSERT INTO boroughs (name, population, county) VALUES
   ('Manhattan', 1694251, 'New York County'),
   ('Brooklyn', 2736074, 'Kings County'),
   ('The Bronx', 1472654, 'Bronx County'),
-  ('Queens', 2405464, 'Queen County'),
+  ('Queens', 2405464, 'Queens County'),
   ('Staten Island', 495747, 'Richmond County');

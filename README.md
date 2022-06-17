@@ -43,7 +43,7 @@
 - III
   - get borough test
   - seed boroughs
-- borough model
+  - borough model
 - get boroughs route
 - get borough by id test
 - update borough model
