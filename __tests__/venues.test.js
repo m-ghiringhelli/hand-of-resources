@@ -11,6 +11,7 @@ describe('venue routes', () => {
   it('should return a list of all the venues in the database', async () => {
     const res = await request(app).get('/venues');
     expect(res.status).toEqual(200);
+    console.log(res.body);
     expect(res.body).toEqual([
       {
         id: '1',
