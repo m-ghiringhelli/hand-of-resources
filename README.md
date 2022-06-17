@@ -23,7 +23,7 @@
   - delete venue test
   - update venue model
   - delete venue route
-- II
+  - II
   - get symphony test
   - seed symphonies
   - symphony model
@@ -37,9 +37,9 @@
   - update symphony test
   - update symphony model
   - update symphony route
-- delete symphony test
-- update symphony model
-- delete symphony route
+  - delete symphony test
+  - update symphony model
+  - delete symphony route
 - III
 - get borough test
 - seed boroughs
