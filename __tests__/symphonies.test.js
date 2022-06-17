@@ -2,6 +2,7 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
+const { Symphony } = require('../lib/models/Symphony');
 
 describe('symphony routes', () => {
   beforeEach(() => {
@@ -60,7 +61,7 @@ describe('symphony routes', () => {
     ]);
   });
 
-  it('should return a symphony by id', async () => {
+  it.skip('should return a symphony by id', async () => {
     const res = await request(app).get('/symphonies/5');
     const expected = {
       id: '5',
@@ -69,6 +70,17 @@ describe('symphony routes', () => {
     };
     expect(res.status).toEqual(200);
     expect(res.body).toEqual(expected);
+  });
+
+  it('should post a new symphony to db', async () => {
+    const symphony = new Symphony({
+      name: 'Symphony No. 10',
+      key: 'Eb minor'
+    });
+    const res = await request(app).post('/symphonies').send(symphony);
+    expect(res.status).toEqual(200);
+    expect(res.body.name).toEqual(symphony.name);
+    expect(res.body.key).toEqual(symphony.key);
   });
 
   afterAll(() => {

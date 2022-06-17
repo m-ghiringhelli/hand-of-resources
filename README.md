@@ -29,8 +29,8 @@
   - symphony model
   - get symphonies route
   - get symphony by id test
-- update symphony model
-- get symphony by id route
+  - update symphony model
+  - get symphony by id route
 - post symphony test
 - update symphony model
 - post symphony route
