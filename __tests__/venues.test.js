@@ -34,7 +34,7 @@ describe('venue routes', () => {
     ]);
   });
 
-  it('should fetch details of one venue by id', async () => {
+  it.skip('should fetch details of one venue by id', async () => {
     const res = await request(app).get('/venues/1');
     const expected = {
       id: '1',
