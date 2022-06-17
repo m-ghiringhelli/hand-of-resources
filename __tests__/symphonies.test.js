@@ -61,6 +61,17 @@ describe('symphony routes', () => {
     ]);
   });
 
+  it('should return a symphony by id', async () => {
+    const res = await request(app).get('/symphonies/5');
+    const expected = {
+      id: '5',
+      name: 'Symphony No. 5',
+      key: 'C minor'
+    };
+    expect(res.status).toEqual(200);
+    expect(res.body).toEqual(expected);
+  });
+
   afterAll(() => {
     pool.end();
   });

@@ -26,8 +26,8 @@
 - II
   - get symphony test
   - seed symphonies
-- symphony model
-- get symphonies route
+  - symphony model
+  - get symphonies route
 - get symphony by id test
 - update symphony model
 - get symphony by id route
