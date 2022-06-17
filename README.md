@@ -21,8 +21,8 @@
   - update venue model
   - update venue route
   - delete venue test
-- update venue model
-- delete venue route
+  - update venue model
+  - delete venue route
 - II
 - get symphony test
 - seed symphonies
