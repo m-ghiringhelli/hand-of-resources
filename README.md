@@ -32,9 +32,9 @@
   - update symphony model
   - get symphony by id route
   - post symphony test
-- update symphony model
-- post symphony route
-- update symphony test
+  - update symphony model
+  - post symphony route
+  - update symphony test
 - update symphony model
 - update symphony route
 - delete symphony test

@@ -72,7 +72,7 @@ describe('symphony routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it('should post a new symphony to db', async () => {
+  it.skip('should post a new symphony to db', async () => {
     const symphony = new Symphony({
       name: 'Symphony No. 10',
       key: 'Eb minor'
@@ -81,6 +81,14 @@ describe('symphony routes', () => {
     expect(res.status).toEqual(200);
     expect(res.body.name).toEqual(symphony.name);
     expect(res.body.key).toEqual(symphony.key);
+  });
+
+  it('should update info on one symphony by id', async () => {
+    // eslint-disable-next-line quotes
+    const res = await request(app).put('/symphonies/3').send({ name: `Symphony No. 3, 'Eroica'` });
+    expect(res.status).toEqual(200);
+    // eslint-disable-next-line quotes
+    expect(res.body.name).toEqual(`Symphony No. 3, 'Eroica'`);
   });
 
   afterAll(() => {
