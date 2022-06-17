@@ -14,11 +14,11 @@
   - get venue by id test
   - update venue model
   - get venue by id route
-- post venue test
-- update venue model
-- post venue route
-- update venue test
-- update venue model
+  - post venue test
+  - update venue model
+  - post venue route
+  - update venue test
+  - update venue model
 - update venue route
 - delete venue test
 - update venue model
