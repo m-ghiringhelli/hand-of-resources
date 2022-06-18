@@ -61,7 +61,7 @@
   - get cheese test
   - seed cheeses
   - cheese model
-- get cheeses route
+  - get cheeses route
 - get cheese by id test
 - update cheese model
 - get cheese by id route
