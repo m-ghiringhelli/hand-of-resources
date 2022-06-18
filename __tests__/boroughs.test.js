@@ -58,7 +58,7 @@ describe('borough routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it('should post a new borough', async () => {
+  it.skip('should post a new borough', async () => {
     const borough = new Borough({
       name: 'Not New York',
       population: 100,

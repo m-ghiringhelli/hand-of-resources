@@ -60,7 +60,7 @@
 - IV
   - get cheese test
   - seed cheeses
-- cheese model
+  - cheese model
 - get cheeses route
 - get cheese by id test
 - update cheese model
