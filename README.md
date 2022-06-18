@@ -68,9 +68,9 @@
   - post cheese test
   - update cheese model
   - post cheese route
-- update cheese test
-- update cheese model
-- update cheese route
+  - update cheese test
+  - update cheese model
+  - update cheese route
 - delete cheese test
 - update cheese model
 - delete cheese route
