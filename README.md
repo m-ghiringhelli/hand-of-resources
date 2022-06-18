@@ -59,7 +59,7 @@
   - delete borough route
 - IV
   - get cheese test
-- seed cheeses
+  - seed cheeses
 - cheese model
 - get cheeses route
 - get cheese by id test
