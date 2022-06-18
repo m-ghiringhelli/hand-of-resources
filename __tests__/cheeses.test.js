@@ -47,7 +47,7 @@ describe('cheese routes', () => {
       name: 'Gruyere',
       type: 'Cooked pressed'
     });
-    const res = await request(app).post('/cheese').send(cheese);
+    const res = await request(app).post('/cheeses').send(cheese);
     expect(res.status).toEqual(200);
     expect(res.body.name).toEqual(cheese.name);
     expect(res.body.type).toEqual(cheese.type);
