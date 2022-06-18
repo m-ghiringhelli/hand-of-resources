@@ -53,6 +53,12 @@ describe('cheese routes', () => {
     expect(res.body.type).toEqual(cheese.type);
   });
 
+  it('should update a cheese row', async () => {
+    const res = await request(app).put('/cheeses/3').send({ name: 'Emmenthaler' });
+    expect(res.status).toEqual(200);
+    expect(res.body.name).toEqual('Emmenthaler');
+  });
+
   afterAll(() => {
     pool.end();
   });
