@@ -3,7 +3,7 @@ const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
 
-descirbe('cheese routes', () => {
+describe('cheese routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
@@ -25,7 +25,7 @@ descirbe('cheese routes', () => {
       {
         id: '3',
         name: 'Emmental',
-        type: 'Cooked pressed cheese'
+        type: 'Cooked pressed'
       }
     ]);
   });

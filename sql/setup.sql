@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS venues;
 DROP TABLE IF EXISTS symphonies;
 DROP TABLE IF EXISTS boroughs;
+DROP TABLE IF EXISTS cheeses;
 
 CREATE TABLE venues (
   id BIGINT GENERATED ALWAYS AS IDENTITY,
@@ -20,6 +21,12 @@ CREATE TABLE boroughs (
   name VARCHAR NOT NULL,
   population INT NOT NULL,
   county VARCHAR NOT NULL
+);
+
+CREATE TABLE cheeses (
+  id BIGINT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR NOT NULL,
+  type VARCHAR NOT NULL
 );
 
 INSERT INTO venues (name, quadrant, capacity) VALUES
@@ -44,3 +51,8 @@ INSERT INTO boroughs (name, population, county) VALUES
   ('The Bronx', 1472654, 'Bronx County'),
   ('Queens', 2405464, 'Queens County'),
   ('Staten Island', 495747, 'Richmond County');
+
+INSERT INTO cheeses (name, type) VALUES
+  ('Ricotta', 'Whey cheese'),
+  ('Provolone', 'Stretched curd'),
+  ('Emmental', 'Cooked pressed');
