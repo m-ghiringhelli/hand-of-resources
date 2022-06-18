@@ -1,0 +1,36 @@
+const pool = require('../lib/utils/pool');
+const setup = require('../data/setup');
+const request = require('supertest');
+const app = require('../lib/app');
+
+descirbe('cheese routes', () => {
+  beforeEach(() => {
+    return setup(pool);
+  });
+
+  it('should return a list of cheeses', async () => {
+    const res = await request(app).get('/cheeses');
+    expect(res.status).toEqual(200);
+    expect(res.body).toEqual([
+      {
+        id: '1',
+        name: 'Ricotta',
+        type: 'Whey cheese'
+      },
+      {
+        id: '2',
+        name: 'Provolone',
+        type: 'Stretched curd'
+      },
+      {
+        id: '3',
+        name: 'Emmental',
+        type: 'Cooked pressed cheese'
+      }
+    ]);
+  });
+
+  afterAll(() => {
+    pool.end();
+  });
+});

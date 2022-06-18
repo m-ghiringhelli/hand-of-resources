@@ -40,7 +40,7 @@
   - delete symphony test
   - update symphony model
   - delete symphony route
-- III
+  - III
   - get borough test
   - seed boroughs
   - borough model
@@ -54,11 +54,11 @@
   - update borough test
   - update borough model
   - update borough route
-- delete borough test
-- update borough model
-- delete borough route
+  - delete borough test
+  - update borough model
+  - delete borough route
 - IV
-- get cheese test
+  - get cheese test
 - seed cheeses
 - cheese model
 - get cheeses route

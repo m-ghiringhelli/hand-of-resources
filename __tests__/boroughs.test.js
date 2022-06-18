@@ -77,7 +77,7 @@ describe('borough routes', () => {
     expect(res.body.population).toEqual(2500000);
   });
 
-  it('should delete a row from table', async () => {
+  it.skip('should delete a row from table', async () => {
     const res = await request(app).delete('/boroughs/5');
     expect(res.status).toEqual(200);
 
