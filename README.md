@@ -63,8 +63,8 @@
   - cheese model
   - get cheeses route
   - get cheese by id test
-- update cheese model
-- get cheese by id route
+  - update cheese model
+  - get cheese by id route
 - post cheese test
 - update cheese model
 - post cheese route
