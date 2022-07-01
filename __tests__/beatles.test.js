@@ -2,6 +2,7 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
+const { Beatle } = require('../lib/models/Beatle');
 
 describe('beatles routes', () => {
   beforeEach(() => {
@@ -37,6 +38,18 @@ describe('beatles routes', () => {
         hand: 'Right'
       }
     ]);
+  });
+
+  it.only('should fetch a beatle by id', async (id) => {
+    const res = await request(app).get('/beatles/2');
+    const expected = {
+      id: '2',
+      name: 'Paul McCartney',
+      instrument: 'Bass',
+      hand: 'Left'
+    };
+    expect(res.status).toBe(200);
+    expect(res.body).toEqual(expected);
   });
 
   afterAll(() => {

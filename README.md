@@ -77,8 +77,8 @@
 - V
   - get province test
   - seed provinces
-- province model
-- get provinces route
+  - province model
+  - get provinces route
 - get province by id test
 - update province model
 - get province by id route
