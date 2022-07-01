@@ -40,7 +40,7 @@ describe('beatles routes', () => {
     ]);
   });
 
-  it.only('should fetch a beatle by id', async () => {
+  it('should fetch a beatle by id', async () => {
     const res = await request(app).get('/beatles/2');
     const expected = {
       id: '2',
@@ -48,9 +48,20 @@ describe('beatles routes', () => {
       instrument: 'Bass',
       hand: 'Left'
     };
-    console.log('res.body', res.body);
     expect(res.status).toBe(200);
     expect(res.body).toEqual(expected);
+  });
+
+  it.only('should add a beatle to the table', async () => {
+    const testBeatle = new Beatle({
+      name: 'Yoko Ono',
+      instrument: 'Caterwauling',
+      hand: 'Right'
+    });
+    const res = await (await request(app).post('/beatles')).setEncoding(testBeatle);
+    expect(res.status).toBe(200);
+    expect(res.body.name).toEqual(testBeatle.name);
+    expect(res.body.instrument).toEqual(testBeatle.instrument);
   });
 
   afterAll(() => {
