@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS venues;
 DROP TABLE IF EXISTS symphonies;
 DROP TABLE IF EXISTS boroughs;
 DROP TABLE IF EXISTS cheeses;
-DROP TABLES IF EXISTS beatles;
+DROP TABLE IF EXISTS beatles;
 
 CREATE TABLE venues (
   id BIGINT GENERATED ALWAYS AS IDENTITY,
@@ -30,12 +30,12 @@ CREATE TABLE cheeses (
   type VARCHAR NOT NULL
 );
 
-CREATE TABLES beatles (
+CREATE TABLE beatles (
   id BIGINT GENERATED ALWAYS AS IDENTITY,
   name VARCHAR NOT NULL,
   instrument VARCHAR NOT NULL,
-  hnad VARCHAR NOT NULL
-)
+  hand VARCHAR NOT NULL
+);
 
 INSERT INTO venues (name, quadrant, capacity) VALUES
   ('Wonder Ballroom', 'NE', 800), 

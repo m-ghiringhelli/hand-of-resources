@@ -76,7 +76,7 @@
   - delete cheese route
 - V
   - get province test
-- seed provinces
+  - seed provinces
 - province model
 - get provinces route
 - get province by id test
