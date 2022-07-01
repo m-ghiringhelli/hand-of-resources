@@ -1,2 +1,72 @@
--- Use this file to define your SQL tables
--- The SQL in this file will be executed when you run `npm run setup-db`
+DROP TABLE IF EXISTS venues;
+DROP TABLE IF EXISTS symphonies;
+DROP TABLE IF EXISTS boroughs;
+DROP TABLE IF EXISTS cheeses;
+DROP TABLE IF EXISTS beatles;
+
+CREATE TABLE venues (
+  id BIGINT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR NOT NULL,
+  quadrant VARCHAR NOT NULL,
+  capacity INT NOT NULL
+);
+
+CREATE TABLE symphonies (
+  id BIGINT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR NOT NULL,
+  key VARCHAR NOT NULL
+);
+
+CREATE TABLE boroughs (
+  id BIGINT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR NOT NULL,
+  population INT NOT NULL,
+  county VARCHAR NOT NULL
+);
+
+CREATE TABLE cheeses (
+  id BIGINT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR NOT NULL,
+  type VARCHAR NOT NULL
+);
+
+CREATE TABLE beatles (
+  id BIGINT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR NOT NULL,
+  instrument VARCHAR NOT NULL,
+  hand VARCHAR NOT NULL
+);
+
+INSERT INTO venues (name, quadrant, capacity) VALUES
+  ('Wonder Ballroom', 'NE', 800), 
+  ('Doug Fir', 'SE', 300),
+  ('Crystal Ballroom', 'SW', 1500);
+
+INSERT INTO symphonies (name, key) VALUES
+  ('Symphony No. 1', 'C major'),
+  ('Symphony No. 2', 'D major'),
+  ('Symphony No. 3', 'Eb major'),
+  ('Symphony No. 4', 'Bb major'),
+  ('Symphony No. 5', 'C minor'),
+  ('Symphony No. 6', 'F major'),
+  ('Symphony No. 7', 'A major'),
+  ('Symphony No. 8', 'F major'),
+  ('Symphony No. 9', 'D minor');
+
+INSERT INTO boroughs (name, population, county) VALUES
+  ('Manhattan', 1694251, 'New York County'),
+  ('Brooklyn', 2736074, 'Kings County'),
+  ('The Bronx', 1472654, 'Bronx County'),
+  ('Queens', 2405464, 'Queens County'),
+  ('Staten Island', 495747, 'Richmond County');
+
+INSERT INTO cheeses (name, type) VALUES
+  ('Ricotta', 'Whey cheese'),
+  ('Provolone', 'Stretched curd'),
+  ('Emmental', 'Cooked pressed');
+
+INSERT INTO beatles (name, instrument, hand) VALUES 
+  ('John Lennon', 'Guitar', 'Right'),
+  ('Paul McCartney', 'Bass', 'Left'),
+  ('George Harrison', 'Guitar', 'Right'),
+  ('Ringo Starr', 'Drums', 'Right');
