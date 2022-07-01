@@ -82,9 +82,9 @@
   - get province by id test
   - update province model
   - get province by id route
-- post province test
-- update province model
-- post province route
+  - post province test
+  - update province model
+  - post province route
 - update province test
 - update province model
 - update province route

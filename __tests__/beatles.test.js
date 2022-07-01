@@ -52,7 +52,7 @@ describe('beatles routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it.only('should add a beatle to the table', async () => {
+  it('should add a beatle to the table', async () => {
     const testBeatle = new Beatle({
       name: 'Yoko Ono',
       instrument: 'Caterwauling',
@@ -62,6 +62,12 @@ describe('beatles routes', () => {
     expect(res.status).toBe(200);
     expect(res.body.name).toEqual(testBeatle.name);
     expect(res.body.instrument).toEqual(testBeatle.instrument);
+  });
+
+  it.only('should update a beatle row', async () => {
+    const res = await request(app).put('/beatles/2').send({ instrument: 'Everything' });
+    expect(res.status).toBe(200);
+    expect(res.body.instrument).toEqual('Everything');
   });
 
   afterAll(() => {
