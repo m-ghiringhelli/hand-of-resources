@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS venues;
 DROP TABLE IF EXISTS symphonies;
 DROP TABLE IF EXISTS boroughs;
 DROP TABLE IF EXISTS cheeses;
+DROP TABLES IF EXISTS beatles;
 
 CREATE TABLE venues (
   id BIGINT GENERATED ALWAYS AS IDENTITY,
@@ -28,6 +29,13 @@ CREATE TABLE cheeses (
   name VARCHAR NOT NULL,
   type VARCHAR NOT NULL
 );
+
+CREATE TABLES beatles (
+  id BIGINT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR NOT NULL,
+  instrument VARCHAR NOT NULL,
+  hnad VARCHAR NOT NULL
+)
 
 INSERT INTO venues (name, quadrant, capacity) VALUES
   ('Wonder Ballroom', 'NE', 800), 
@@ -56,3 +64,9 @@ INSERT INTO cheeses (name, type) VALUES
   ('Ricotta', 'Whey cheese'),
   ('Provolone', 'Stretched curd'),
   ('Emmental', 'Cooked pressed');
+
+INSERT INTO beatles (name, instrument, hand) VALUES 
+  ('John Lennon', 'Guitar', 'Right'),
+  ('Paul McCartney', 'Bass', 'Left'),
+  ('George Harrison', 'Guitar', 'Right'),
+  ('Ringo Starr', 'Drums', 'Right');

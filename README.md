@@ -57,7 +57,7 @@
   - delete borough test
   - update borough model
   - delete borough route
-- IV
+  - IV
   - get cheese test
   - seed cheeses
   - cheese model
@@ -75,7 +75,7 @@
   - update cheese model
   - delete cheese route
 - V
-- get province test
+  - get province test
 - seed provinces
 - province model
 - get provinces route
