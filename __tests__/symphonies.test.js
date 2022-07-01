@@ -9,7 +9,7 @@ describe('symphony routes', () => {
     return setup(pool);
   });
 
-  it.skip('should return a list of symphonies in the database', async () => {
+  it('should return a list of symphonies in the database', async () => {
     const res = await request(app).get('/symphonies');
     expect(res.status).toEqual(200);
     expect(res.body).toEqual([
@@ -61,7 +61,7 @@ describe('symphony routes', () => {
     ]);
   });
 
-  it.skip('should return a symphony by id', async () => {
+  it('should return a symphony by id', async () => {
     const res = await request(app).get('/symphonies/5');
     const expected = {
       id: '5',
@@ -72,7 +72,7 @@ describe('symphony routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it.skip('should post a new symphony to db', async () => {
+  it('should post a new symphony to db', async () => {
     const symphony = new Symphony({
       name: 'Symphony No. 10',
       key: 'Eb minor'
@@ -83,7 +83,7 @@ describe('symphony routes', () => {
     expect(res.body.key).toEqual(symphony.key);
   });
 
-  it.skip('should update info on one symphony by id', async () => {
+  it('should update info on one symphony by id', async () => {
     // eslint-disable-next-line quotes
     const res = await request(app).put('/symphonies/3').send({ name: `Symphony No. 3, 'Eroica'` });
     expect(res.status).toEqual(200);
@@ -91,7 +91,7 @@ describe('symphony routes', () => {
     expect(res.body.name).toEqual(`Symphony No. 3, 'Eroica'`);
   });
 
-  it.skip('should delete a row from table', async () => {
+  it('should delete a row from table', async () => {
     const res = await request(app).delete('/symphonies/2');
     expect(res.status).toEqual(200);
 

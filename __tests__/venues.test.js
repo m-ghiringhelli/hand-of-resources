@@ -9,7 +9,7 @@ describe('venue routes', () => {
     return setup(pool);
   });
 
-  it.skip('should return a list of all the venues in the database', async () => {
+  it('should return a list of all the venues in the database', async () => {
     const res = await request(app).get('/venues');
     expect(res.status).toEqual(200);
     expect(res.body).toEqual([
@@ -34,7 +34,7 @@ describe('venue routes', () => {
     ]);
   });
 
-  it.skip('should fetch details of one venue by id', async () => {
+  it('should fetch details of one venue by id', async () => {
     const res = await request(app).get('/venues/1');
     const expected = {
       id: '1',
@@ -46,7 +46,7 @@ describe('venue routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it.skip('should post a new venue to db', async () => {
+  it('should post a new venue to db', async () => {
     const venue = new Venue({
       name: 'Keller Auditorium',
       quadrant: 'SW',
@@ -59,13 +59,13 @@ describe('venue routes', () => {
     expect(res.body.capacity).toEqual(venue.capacity);
   });
 
-  it.skip('should update a venue by id', async () => {
+  it('should update a venue by id', async () => {
     const res = await request(app).put('/venues/2').send({ name: 'Doug Fir Lounge' });
     expect(res.status).toEqual(200);
     expect(res.body.name).toEqual('Doug Fir Lounge');
   });
 
-  it.skip('should delete a row by id', async () => {
+  it('should delete a row by id', async () => {
     const res = await request(app).delete('/venues/2');
     expect(res.status).toEqual(200);
     

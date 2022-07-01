@@ -67,7 +67,6 @@ describe('beatles routes', () => {
   it('should update a beatle row', async () => {
     const res = await request(app).put('/beatles/2').send({ instrument: 'Everything' });
     expect(res.status).toBe(200);
-    console.log('res.body', res.body);
     expect(res.body.instrument).toEqual('Everything');
   });
 

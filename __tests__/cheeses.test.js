@@ -9,7 +9,7 @@ describe('cheese routes', () => {
     return setup(pool);
   });
 
-  it.skip('should return a list of cheeses', async () => {
+  it('should return a list of cheeses', async () => {
     const res = await request(app).get('/cheeses');
     expect(res.status).toEqual(200);
     expect(res.body).toEqual([
@@ -31,7 +31,7 @@ describe('cheese routes', () => {
     ]);
   });
 
-  it.skip('should return a cheese by id', async () => {
+  it('should return a cheese by id', async () => {
     const res = await request(app).get('/cheeses/2');
     const expected = {
       id: '2',
@@ -42,7 +42,7 @@ describe('cheese routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it.skip('should post a new cheese to the table', async () => {
+  it('should post a new cheese to the table', async () => {
     const cheese = new Cheese({
       name: 'Gruyere',
       type: 'Cooked pressed'
@@ -53,13 +53,13 @@ describe('cheese routes', () => {
     expect(res.body.type).toEqual(cheese.type);
   });
 
-  it.skip('should update a cheese row', async () => {
+  it('should update a cheese row', async () => {
     const res = await request(app).put('/cheeses/3').send({ name: 'Emmenthaler' });
     expect(res.status).toEqual(200);
     expect(res.body.name).toEqual('Emmenthaler');
   });
 
-  it.skip('should delete a cheese from the table', async () => {
+  it('should delete a cheese from the table', async () => {
     const res = await request(app).delete('/cheeses/2');
     expect(res.status).toEqual(200);
 

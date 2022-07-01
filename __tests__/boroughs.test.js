@@ -9,7 +9,7 @@ describe('borough routes', () => {
     return setup(pool);
   });
 
-  it.skip('should return a list of all the boroughs', async () => {
+  it('should return a list of all the boroughs', async () => {
     const res = await request(app).get('/boroughs');
     expect(res.status).toEqual(200);
     expect(res.body).toEqual([
@@ -46,7 +46,7 @@ describe('borough routes', () => {
     ]);
   });
 
-  it.skip('should return a borough selected by id', async () => {
+  it('should return a borough selected by id', async () => {
     const res = await request(app).get('/boroughs/4');
     const expected = {
       id: '4',
@@ -58,7 +58,7 @@ describe('borough routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it.skip('should post a new borough', async () => {
+  it('should post a new borough', async () => {
     const borough = new Borough({
       name: 'Not New York',
       population: 100,
@@ -71,13 +71,13 @@ describe('borough routes', () => {
     expect(res.body.county).toEqual(borough.county);
   });
   
-  it.skip('should update a borough by id', async () => {
+  it('should update a borough by id', async () => {
     const res = await request(app).put('/boroughs/4').send({ population: 2500000 });
     expect(res.status).toEqual(200);
     expect(res.body.population).toEqual(2500000);
   });
 
-  it.skip('should delete a row from table', async () => {
+  it('should delete a row from table', async () => {
     const res = await request(app).delete('/boroughs/5');
     expect(res.status).toEqual(200);
 
