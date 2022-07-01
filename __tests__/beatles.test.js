@@ -58,7 +58,7 @@ describe('beatles routes', () => {
       instrument: 'Caterwauling',
       hand: 'Right'
     });
-    const res = await (await request(app).post('/beatles')).setEncoding(testBeatle);
+    const res = await request(app).post('/beatles').send(testBeatle);
     expect(res.status).toBe(200);
     expect(res.body.name).toEqual(testBeatle.name);
     expect(res.body.instrument).toEqual(testBeatle.instrument);
