@@ -64,11 +64,19 @@ describe('beatles routes', () => {
     expect(res.body.instrument).toEqual(testBeatle.instrument);
   });
 
-  it.only('should update a beatle row', async () => {
+  it('should update a beatle row', async () => {
     const res = await request(app).put('/beatles/2').send({ instrument: 'Everything' });
     expect(res.status).toBe(200);
     console.log('res.body', res.body);
     expect(res.body.instrument).toEqual('Everything');
+  });
+
+  it('should delete a row', async () => {
+    const res = await request(app).delete('/beatles/2');
+    expect(res.status).toEqual(200);
+
+    const { body } = await request(app).get('/beatles/2');
+    expect(body).toEqual('');
   });
 
   afterAll(() => {

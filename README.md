@@ -85,9 +85,9 @@
   - post province test
   - update province model
   - post province route
-- update province test
-- update province model
-- update province route
+  - update province test
+  - update province model
+  - update province route
 - delete province test
 - update province model
 - delete province route
