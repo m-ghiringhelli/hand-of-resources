@@ -40,7 +40,7 @@ describe('beatles routes', () => {
     ]);
   });
 
-  it.only('should fetch a beatle by id', async (id) => {
+  it.only('should fetch a beatle by id', async () => {
     const res = await request(app).get('/beatles/2');
     const expected = {
       id: '2',
@@ -48,6 +48,7 @@ describe('beatles routes', () => {
       instrument: 'Bass',
       hand: 'Left'
     };
+    console.log('res.body', res.body);
     expect(res.status).toBe(200);
     expect(res.body).toEqual(expected);
   });
